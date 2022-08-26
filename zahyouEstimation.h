@@ -21,7 +21,7 @@
 
 
 
-#define markerIdsNumber 13
+#define MarkerIdsNumber 13
 #define Marker00_x 0
 #define Marker00_y 0
 #define Marker01_x 0 
