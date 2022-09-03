@@ -1,4 +1,4 @@
-﻿#include "ARTest.h"
+#include "ARTest.h"
 
 ARMarker::ARMarker()
 {
@@ -9,7 +9,7 @@ ARMarker::ARMarker()
 	//distCoeffs640_480 = (cv::Mat_<double>(1, 5) << -0.0155008, -0.0578324, 0, 0, 0);
 
 	//ラズパイ
-	cameraMatrix640_480 = (cv::Mat_<double>(3, 3) << 485.70642, 0, 319.5,0, 485.70642, 239.5,0, 0, 1);
+	cameraMatrix640_480 = (cv::Mat_<double>(3, 3) <<485.70642, 0, 319.5,0, 485.70642, 239.5,0, 0, 1);
 	distCoeffs640_480 = (cv::Mat_<double>(1, 5) << 0.159363, -0.300482, 0, 0, 0);
 	cameraMatrix480_360 = (cv::Mat_<double>(3, 3) << 296.66498, 0, 239.5,0, 296.66498, 179.5,0, 0, 1);
 	distCoeffs480_360 = (cv::Mat_<double>(1, 5) << 0.0394978, -0.101765, 0, 0, 0);
@@ -18,36 +18,36 @@ ARMarker::ARMarker()
 
 
 
-	markerPosition[0] = { MARKER00_X,MARKER00_Y };
-	markerPosition[1] = { MARKER01_X,MARKER01_Y };
-	markerPosition[2] = { MARKER02_X,MARKER02_Y };
-	markerPosition[3] = { MARKER03_X,MARKER03_Y };
-	markerPosition[4] = { MARKER04_X,MARKER04_Y };
-	markerPosition[5] = { MARKER05_X,MARKER05_Y };
-	markerPosition[6] = { MARKER06_X,MARKER06_Y };
-	markerPosition[7] = { MARKER07_X,MARKER07_Y };
-	markerPosition[8] = { MARKER08_X,MARKER08_Y };
-	markerPosition[9] = { MARKER09_X,MARKER09_Y };
-	markerPosition[10] = { MARKER10_X,MARKER10_Y };
-	markerPosition[11] = { MARKER11_X,MARKER11_Y };
-	markerPosition[12] = { MARKER12_X,MARKER12_Y };
-	markerPosition[13] = { MARKER13_X,MARKER13_Y };
-	markerPosition[14] = { MARKER14_X,MARKER14_Y };
-	markerPosition[15] = { MARKER15_X,MARKER15_Y };
-	markerPosition[16] = { MARKER16_X,MARKER16_Y };
-	markerPosition[17] = { MARKER17_X,MARKER17_Y };
-	markerPosition[18] = { MARKER18_X,MARKER18_Y };
-	markerPosition[19] = { MARKER19_X,MARKER19_Y };
-	markerPosition[20] = { MARKER20_X,MARKER20_Y };
-	markerPosition[21] = { MARKER21_X,MARKER21_Y };
-	markerPosition[22] = { MARKER22_X,MARKER22_Y };
-	markerPosition[23] = { MARKER23_X,MARKER23_Y };
-	markerPosition[24] = { MARKER24_X,MARKER24_Y };
-	markerPosition[25] = { MARKER25_X,MARKER25_Y };
-	markerPosition[26] = { MARKER26_X,MARKER26_Y };
-	markerPosition[27] = { MARKER27_X,MARKER27_Y };
-	markerPosition[28] = { MARKER28_X,MARKER28_Y };
-	markerPosition[29] = { MARKER29_X,MARKER29_Y };
+	markerPosition[0] = { MARKER00_X,MARKER00_Y,MARKER00_SIZE };
+	markerPosition[1] = { MARKER01_X,MARKER01_Y ,MARKER01_SIZE};
+	markerPosition[2] = { MARKER02_X,MARKER02_Y ,MARKER02_SIZE };
+	markerPosition[3] = { MARKER03_X,MARKER03_Y ,MARKER03_SIZE };
+	markerPosition[4] = { MARKER04_X,MARKER04_Y ,MARKER04_SIZE };
+	markerPosition[5] = { MARKER05_X,MARKER05_Y ,MARKER05_SIZE };
+	markerPosition[6] = { MARKER06_X,MARKER06_Y ,MARKER06_SIZE };
+	markerPosition[7] = { MARKER07_X,MARKER07_Y ,MARKER07_SIZE };
+	markerPosition[8] = { MARKER08_X,MARKER08_Y ,MARKER08_SIZE };
+	markerPosition[9] = { MARKER09_X,MARKER09_Y ,MARKER09_SIZE };
+	markerPosition[10] = { MARKER10_X,MARKER10_Y ,MARKER10_SIZE };
+	markerPosition[11] = { MARKER11_X,MARKER11_Y ,MARKER11_SIZE };
+	markerPosition[12] = { MARKER12_X,MARKER12_Y ,MARKER12_SIZE };
+	markerPosition[13] = { MARKER13_X,MARKER13_Y ,MARKER13_SIZE };
+	markerPosition[14] = { MARKER14_X,MARKER14_Y ,MARKER14_SIZE };
+	markerPosition[15] = { MARKER15_X,MARKER15_Y ,MARKER15_SIZE };
+	markerPosition[16] = { MARKER16_X,MARKER16_Y ,MARKER16_SIZE };
+	markerPosition[17] = { MARKER17_X,MARKER17_Y ,MARKER17_SIZE };
+	markerPosition[18] = { MARKER18_X,MARKER18_Y ,MARKER18_SIZE };
+	markerPosition[19] = { MARKER19_X,MARKER19_Y ,MARKER19_SIZE };
+	markerPosition[20] = { MARKER20_X,MARKER20_Y ,MARKER20_SIZE };
+	markerPosition[21] = { MARKER21_X,MARKER21_Y ,MARKER21_SIZE };
+	markerPosition[22] = { MARKER22_X,MARKER22_Y ,MARKER22_SIZE };
+	markerPosition[23] = { MARKER23_X,MARKER23_Y ,MARKER23_SIZE };
+	markerPosition[24] = { MARKER24_X,MARKER24_Y ,MARKER24_SIZE };
+	markerPosition[25] = { MARKER25_X,MARKER25_Y ,MARKER25_SIZE };
+	markerPosition[26] = { MARKER26_X,MARKER26_Y ,MARKER26_SIZE };
+	markerPosition[27] = { MARKER27_X,MARKER27_Y ,MARKER27_SIZE };
+	markerPosition[28] = { MARKER28_X,MARKER28_Y ,MARKER28_SIZE };
+	markerPosition[29] = { MARKER29_X,MARKER29_Y ,MARKER29_SIZE };
 	//----------------------------------------------------------------------------------------------------------------------------
 
 
@@ -97,6 +97,11 @@ float ARMarker::getMarkerPositionX(uint8_t id)
 float ARMarker::getMarkerPositionY(uint8_t id)
 {
 	return markerPosition[id].y;
+}
+
+float ARMarker::getMarkerSize(uint8_t id)
+{
+	return markerPosition[id].markerSize;
 }
 
 cv::Ptr<cv::aruco::Dictionary> ARMarker::getArucoDictionary()
@@ -156,8 +161,6 @@ cv::Mat ARMarker::zahyouEstimation(ARMarkerToEstimationParameter* Prm, cv::Mat i
 
 
 
-
-
 		//camera座標 → marekr座標-------------------------------------------------------------------------------------------------------------------
 		uint8_t kyoriGaTikai = 0; //配列のn番目
 		std::vector<float> relativeDistance; //相対距離
@@ -202,11 +205,10 @@ cv::Mat ARMarker::zahyouEstimation(ARMarkerToEstimationParameter* Prm, cv::Mat i
 			}
 
 
-			if ((k != 0) && ((relativeDistance[k - 1]) < (relativeDistance[k])))
+			if ((k != 0) && ((relativeDistance[kyoriGaTikai]) > (relativeDistance[k])))
 			{
-				kyoriGaTikai = k - 1;
+				kyoriGaTikai = k;
 			}
-			else kyoriGaTikai = k;
 
 
 
@@ -226,7 +228,7 @@ cv::Mat ARMarker::zahyouEstimation(ARMarkerToEstimationParameter* Prm, cv::Mat i
 		for (uint8_t n = 0; n < ids.size(); n++)
 		{
 			cv::aruco::drawDetectedMarkers(imageCopy, corners, ids);
-			cv::drawFrameAxes(imageCopy, AR->getCameraMatrix640_480(), AR->getDistCoeffs640_480(), rvecs[n], tvecs[n], 0.1);  
+			cv::drawFrameAxes(imageCopy, AR->getCameraMatrix640_480(), AR->getDistCoeffs640_480(), rvecs[n], tvecs[n], 0.1480 /2);  
 		}
 
 		//------------------------------------------------------------------------------------------------------------------------------------------------
