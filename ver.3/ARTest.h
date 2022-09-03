@@ -165,7 +165,7 @@ class ARMarker
 		cv::Mat getImageMat(cv::VideoCapture inputVideo);
 		cv::Mat zahyouEstimation(ARMarkerToEstimationParameter* Prm,  cv::Mat inputMat, ARMarker *AR);
 		void displayImage(cv::Mat image);  //!!!画像表示のため10msの遅延関数が含まれているので注意!!!
-		void videoSetup(cv::VideoCapture* inputVideo);
+		void videoSetup(cv::VideoCapture* inputVideo); 
 
 		//void displayPrm(ARMarker* AR)
 		//-----------------------------------------------------------
