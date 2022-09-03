@@ -80,6 +80,42 @@
 #define MARKER29_X 0
 #define MARKER29_Y 0
 
+//marker_size [m]
+
+#define MARKER00_SIZE 0.14800
+#define MARKER01_SIZE 0.14800
+#define MARKER02_SIZE 0.14800
+#define MARKER03_SIZE 0.14800
+#define MARKER04_SIZE 0.14800
+#define MARKER05_SIZE 0.14800
+#define MARKER06_SIZE 0.14800
+#define MARKER07_SIZE 0.14800
+#define MARKER08_SIZE 0.14800
+#define MARKER09_SIZE 0.14800
+#define MARKER10_SIZE 0.14800
+
+#define MARKER11_SIZE 0.14800
+#define MARKER12_SIZE 0.14800
+#define MARKER13_SIZE 0.14800
+#define MARKER14_SIZE 0.14800
+#define MARKER15_SIZE 0.14800
+#define MARKER16_SIZE 0.14800
+#define MARKER17_SIZE 0.14800
+#define MARKER18_SIZE 0.14800
+#define MARKER19_SIZE 0.14800
+#define MARKER20_SIZE 0.14800
+
+#define MARKER21_SIZE 0.14800
+#define MARKER22_SIZE 0.14800
+#define MARKER23_SIZE 0.14800
+#define MARKER24_SIZE 0.14800
+#define MARKER25_SIZE 0.14800
+#define MARKER26_SIZE 0.14800
+#define MARKER27_SIZE 0.14800
+#define MARKER28_SIZE 0.14800
+#define MARKER29_SIZE 0.14800
+
+
 
 
 class ARMarker
@@ -95,7 +131,7 @@ class ARMarker
 		class markerPosition
 		{
 		public:
-			float x, y;
+			float x, y, markerSize;
 		}markerPosition[MARKERIdsNumber];
 
 
@@ -106,7 +142,7 @@ class ARMarker
 		ARMarker();
 
 		//class------------------------------------------------------
-		//ÅIo—Í
+		//æœ€çµ‚å‡ºåŠ›
 		class ARMarkerToEstimationParameter {
 		public:
 			float x, y, z, yaw, pitch, roll;
@@ -122,12 +158,13 @@ class ARMarker
 		cv::Mat getDistCoeffs480_360();
 		float getMarkerPositionX(uint8_t id);
 		float getMarkerPositionY(uint8_t id);
+		float getMarkerSize(uint8_t id);
 		cv::Ptr<cv::aruco::Dictionary> getArucoDictionary();
 
 
 		cv::Mat getImageMat(cv::VideoCapture inputVideo);
 		cv::Mat zahyouEstimation(ARMarkerToEstimationParameter* Prm,  cv::Mat inputMat, ARMarker *AR);
-		void displayImage(cv::Mat image);  //!!!‰æ‘œ•\¦‚Ì‚½‚ß10ms‚Ì’x‰„ŠÖ”‚ªŠÜ‚Ü‚ê‚Ä‚¢‚é‚Ì‚Å’ˆÓ!!!
+		void displayImage(cv::Mat image);  //!!!ç”»åƒè¡¨ç¤ºã®ãŸã‚10msã®é…å»¶é–¢æ•°ãŒå«ã¾ã‚Œã¦ã„ã‚‹ã®ã§æ³¨æ„!!!
 		void videoSetup(cv::VideoCapture* inputVideo);
 
 		//void displayPrm(ARMarker* AR)
